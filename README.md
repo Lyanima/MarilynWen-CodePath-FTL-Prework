@@ -56,20 +56,20 @@ If you recorded multiple GIFs for all the implemented features, you can add them
    GlitchBlog (https://blog.glitch.com/): I browsed through the projects featured on the blog to understand how to use Assets and other features in Glitch
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words)
-   
+   A challenge I encountered was using the HTML DOM to automate styling the webpage. I designed my program to have eight buttons, each holding a tune from C, D, E, ... up to C an octave higher. Once the song is chosen and game has started, the program will automatically filter through the song and determine which buttons are needed to be displayed. It then populates the chosen buttons with alternating yellow and green jasmine flower images to differentiate them. However, I realized that this function could not be accomplished using strictly CSS, since populating the document with buttons happens in run-time. Since the given pre-work code used the DOM to add .hidden class during run-time, I researched for ways to populate the backgrounds and ":active, .lit" properties of the buttons. I realized a way to automate populating the background-images, but there seem to be no error-proof solution for the ":active, .lit". I eventually realized that instead of making them change the buttons to a different color, they could just change the button opacity, saturation and other values, which serve the same purpose with simpler procedure and more aesthetic results.
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words)
-   
+   I've very eager to explore ways of automating code in full-stack development. The current interface in our program is largely manually programed with HTML and CSS. I was eager to explore more possibilities of using JavaScript to populate the interface, listen for events, and manage overall style of the game. This would not only allow for more automation, but also greater potentials for expanding the program for future features. During the prework project, I experimented with using DOM in JavaScript to manage CSS style elements, but that does not seem to be the most direct method. I would love to learn about other technologies such as React.js,  and Node.js to automate more code.
 
 4. If you had a few more hours to work on this project, what would you spend them doing
    (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words)
-   First, I would like to refactor my code to include less global variables. I would like to do so by passing local variables enclosed by brackets into functions. For example, 
+   First, I would like to refactor my code to include less global variables. The use of extensive amounts of global variables in JavaScript could lead to various buggy code. There are two ways which I plan to resolve it. During the project, I tried experimenting with importing .mjs files into glitch projects, but the procedure does not seem straight-forward. Given the time constraint, I did not invest my time in researching on this aspect. I would like to implement more code as class variables to store the current global variables in an enclosed manner. Second, I would like to do so by passing local variables enclosed by brackets into functions. For example, after the startGame() function, there should no longer be a need for the boolean variable holding if game is playing. If given more time, I would like to experiment with both methods to improve the exception safety of my code.
    
-   Second, I would like to further develop the program by adding various functions. I  
+   Second, I would like to further develop the program by adding various functions. I wanted to implement a system to hold a song database of traditional cultural songs just like my current song "jasmine flower". If I could develop an algorithm to take in current songs and transform it to song patterns in the game, the game would serve more purpose as a cultural song learner.
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording] 
+[https://youtu.be/A3uFWeI6ZlQ] 
 
 ## License
 
