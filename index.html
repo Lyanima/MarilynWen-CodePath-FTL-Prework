@@ -4,43 +4,60 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <title>Hello world!</title>
+    <title>Memory Game: Learn the Chinese Traditional Song "Jasmine Flower"</title>
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-
+    
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
+    <script src="/addFeatures.js" defer></script>
   </head>
   <body>
     <!-- this is the start of content -->
     <h1>
-      Marilyn's Prework Project
+      Memory Game: 
     </h1>
-    <p>
-      This starter gives you everything you need to start working on a new
-      website, and nothing more. If you're looking for something a little more
-      opinionated, try remixing
-      <a href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-        >~glitch-hello-website</a
-      >.
+    <h2>
+      Learn the Chinese Traditional Song "Jasmine Flower"
+    </h2>
+    <p id = "description">
+      Repeat the Patterns, Ready - Set - Go!!
+      <a href="https://glitch.com/edit/#!/remix/glitch-hello-website">
+        tutorial
+      </a>
     </p>
-    
-    <button id = "startBtn" onclick = "startGame()">
+    <div id = "startAndTime">
+      <button id = "startBtn" onclick = "startGame()">
       Start
-    </button>
+      </button>
+
+      <button id = "stopBtn" class = "hidden" onclick = "stopGame()">
+        Stop
+      </button>
+      <p id = "timer">
+        <img src="https://cdn.glitch.global/e8c92ccb-e3a1-45c5-a4c2-48e4d7eae45b/clock_pixel.png?v=1650682741556" width="50" height="50">
+        <span id = "countDown">
+          05:00
+        </span>
+      </p>
+    </div>
     
-    <button id = "stopBtn" class = "hidden" onclick = "stopGame()">
-      Stop
-    </button>
+    <div id = "speedButtons">
+      <button id = "+" onclick = "speedChange(true)">Speed +</button>
+      <button id = "-" onclick = "speedChange(false)">Speed -</button>
+      <h1 id = "speedDisplay" class = "hidden"></h1>
+    </div>
     
     <div id = "gameButtonArea">
-      <button id = "button1" onclick = "guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
-      <button id = "button2" onclick = "guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
-      <button id = "button3" onclick = "guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
-      <button id = "button4" onclick = "guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
-      
+      <button id = "button1" onclick = "guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"  class = "hidden"></button>
+      <button id = "button2" onclick = "guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()" class = "hidden"></button>
+      <button id = "button3" onclick = "guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()" class = "hidden"></button>
+      <button id = "button4" onclick = "guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()" class = "hidden"></button>
+      <button id = "button5" onclick = "guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()" class = "hidden"></button>
+      <button id = "button6" onclick = "guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()" class = "hidden"></button>
+      <button id = "button7" onclick = "guess(7)" onmousedown="startTone(7)" onmouseup="stopTone()" class = "hidden"></button>
+      <button id = "button8" onclick = "guess(8)" onmousedown="startTone(8)" onmouseup="stopTone()" class = "hidden"></button>
     </div>
   </body>
 </html>

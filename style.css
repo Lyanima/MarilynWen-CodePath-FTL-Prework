@@ -1,4 +1,21 @@
 /* a minimalist set of CSS resets */
+@font-face {
+    font-family: 'Common Pixel';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Common Pixel'), url('https://fonts.cdnfonts.com/s/7553/COMMP___.woff') format('woff');
+}
+
+:root{
+  --btnColor1: red;
+  --btnColor2: yellow;
+  --btnColor3: orange;
+  --btnColor4: green;
+  --btnColor5: cyan;
+  --btnColor6: blue;
+  --btnColor7: purple;
+  --btnColor8: pink;
+}
 
 /* default to border-box */
 html {
@@ -15,18 +32,41 @@ body {
   margin: 1rem;
   font-family: sans-serif;
   line-height: 1.5;
-  
-  background-color:slategrey;
-  color:white;
-  
+  color: #5b4913; 
+  /* beige color */
+  background-color:#F3EBE0;
 }
+
 h1{
-  font-family: verdana, arial, sans-serif;
+  font-family: 'Common Pixel', arial, sans-serif;
+  /* brown color */
+  color: #481e1c;
+}
+
+h2{
+  font-family: arial, sans-serif;
+  /* brown color */
+  color: #481e1c;
+  
 }
 
 button{
+  font-family: 'Common Pixel', arial, sans-serif;
+  background-color: #EAD3A7;
+  /* brown color */
+  color: #481e1c;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+  border-color: #481e1c;
+}
+
+#countDown{
+  background:#481e1c;
+  padding: 10px;
+  
+  font-family: 'Common Pixel', arial, sans-serif;
+  font-size: 30px;
+  color: white;
 }
 
 #gameButtonArea > button{
@@ -35,42 +75,65 @@ button{
   margin:2px;
 }
 
-#button1{
-  background:lightgreen;
+#button1,#button2, #button3, #button4, #button5, #button6, #button7, #button8{
+  background:yellow;
 }
 
 #button1:active, #button1.lit{
-  background:green;
+  background-image:none;
+  background-color:var(--btnColor1);
+  opacity:50%;
 }
 
-#button2{
-  background:lightblue;
-}
 
 #button2:active, #button2.lit{
-  background:blue;
-}
-
-#button3{
-  background:pink;
+  background-image:none;
+  background-color:var(--btnColor2);
+  opacity:50%;
 }
 
 #button3:active, #button3.lit{
-  background:red;
-}
-
-#button4{
-  background:lightyellow ;
+  background-image:none;
+  background-color:var(--btnColor3);
+  opacity:50%;
 }
 
 #button4:active, #button4.lit{
-  background:yellow ;
+  background-image:none;
+  background-color:var(--btnColor4);
+  opacity:50%;
+}
+
+#button5:active, #button5.lit{
+  background-image:none;
+  background-color:var(--btnColor5);
+  opacity:50%;
+}
+
+
+#button6:active, #button6.lit{
+  background-image:none;
+  background-color:var(--btnColor6);
+  opacity:50%;
+}
+
+#button7:active, #button7.lit{
+  background-image:none;
+  background-color:var(--btnColor7);
+  opacity:50%;
+}
+
+#button8:active, #button8.lit{
+  background-image:none;
+  background-color:var(--btnColor8);
+  opacity:50%;
 }
 
 
 .hidden{
   display:none;
 }
+
 /* images and videos max out at full width */
 img,
 video {
